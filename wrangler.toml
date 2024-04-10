@@ -8,3 +8,6 @@ binding = "AI"
 [[vectorize]]
 binding = "VECTORIZE_SESSIONS_INDEX" # available within your Worker on env.VECTORIZE_SESSIONS_INDEX
 index_name = "wordcamp-sessions"
+
+[env.production.triggers]
+crons = ["0 17 * * sun or 0 17 * * 1"]
