@@ -1,0 +1,10 @@
+name = "wordcamp-rag-app"
+compatibility_date = "2023-12-01"
+compatibility_flags = [ "nodejs_compat" ]
+
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE_SESSIONS_INDEX" # available within your Worker on env.VECTORIZE_SESSIONS_INDEX
+index_name = "wordcamp-sessions"
