@@ -44,3 +44,24 @@ or
 
 % npm run deploy
 ```
+
+## Craete the 1st index
+
+### Make sure the application URL
+
+On the following example, the application URL is `http://localhost:49705``.
+```bash
+% wrangler dev src/index.tsx --remote
+ ⛅️ wrangler 3.48.0
+-------------------
+Using vars defined in .dev.vars
+Your worker has access to the following bindings:
+[wrangler:inf] Ready on http://localhost:49705
+```
+
+### Visit the force indexing page
+
+Please visit the `{YOUR_APPLICATION_URL}/api/indexes`.
+For example, if the application URL is `http://localhost:49705`, you should visit to `http://localhost:49705/api/indexes`.
+
+The page is proctected by the BASIC Authentication. Please put the username and password that you set before.

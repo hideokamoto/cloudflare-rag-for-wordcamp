@@ -28,6 +28,7 @@ app.get('/api/indexes', async c => {
   })
   return c.text("Put all session content")
 })
+
 app.get('/', (c) => {
   return c.render(
     <main>
