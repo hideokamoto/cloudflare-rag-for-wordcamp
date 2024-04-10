@@ -21,6 +21,8 @@
 % npx wrangler secret put CLOUDFLARE_API_TOKEN
 % npx wrangler secret put WORDCAMP_NAME
 % npx wrangler secret put EVENT_YEAR
+% npx wrangler secret put ADMIN_USERNAME
+% npx wrangler secret put ADMIN_PASSWORD
 ```
 
 |Sercet name|Value|example|
@@ -29,6 +31,8 @@
 |CLOUDFLARE_API_TOKEN|[Read official document](https://developers.cloudflare.com/workers-ai/get-started/rest-api/)||
 |WORDCAMP_NAME|Target event name|WordCamp Asia 2024 -> `asia`|
 |EVENT_YEAR|Target event year|WordCamp Asia 2024 -> `2024`|
+|ADMIN_USERNAME|Basic Authentication for indexing API|`admin`|
+|ADMIN_PASSWORD|Basic Authentication for indexing API|`password`|
 
 
 ### Run this app remoty or deploy it

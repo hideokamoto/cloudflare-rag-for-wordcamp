@@ -3,12 +3,31 @@ import { renderer } from './renderer'
 import { Bindings, createHonoApp } from './lib/hono'
 import { createSessionChain } from './chains/sessions'
 import { streamText } from 'hono/streaming'
+import { cors } from 'hono/cors'
 import { updateSessionIndex } from './indexes/session'
+import { basicAuth } from 'hono/basic-auth'
 
 const app = createHonoApp()
 
 app.use(renderer)
 
+app.use('/api/indexes', cors())
+app.all(
+  '/api/indexes', 
+  async (c, next) => {
+    const auth = basicAuth({
+      username: c.env.ADMIN_USERNAME,
+      password: c.env.ADMIN_PASSWORD,
+    })
+    return auth(c, next)
+  }
+)
+app.get('/api/indexes', async c => {
+  await updateSessionIndex(c.env, {
+    fourceUpdate: true,
+  })
+  return c.text("Put all session content")
+})
 app.get('/', (c) => {
   return c.render(
     <main>

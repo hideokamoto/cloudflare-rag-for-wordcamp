@@ -6,6 +6,8 @@ export type Bindings = {
     AI: Fetcher;
     WORDCAMP_NAME: string
     EVENT_YEAR: string
+    ADMIN_USERNAME: string;
+    ADMIN_PASSWORD: string;
 }
 
 export const createHonoApp = () => {
