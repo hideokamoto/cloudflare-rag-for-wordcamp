@@ -1,4 +1,20 @@
+# AI powered session recommendation application for WordCamp
+
+It's a simple demo RAG application for the WordCamp organizers.
+We can easy to create a new RAG application to get a recommendation about the session on the WordCamp that you're getting involved in.
+
+<img width="841" alt="スクリーンショット 2024-04-10 23 25 17" src="https://github.com/hideokamoto/cloudflare-rag-for-wordcamp/assets/6883571/2a665576-6bdf-49b6-b4dc-d192c6b5ee62">
+
+
+
 ## Get started
+
+### Requirement
+
+You must have a active Cloudflare account.
+And please subscribe the `Workers Paid` plan before delpoy this.
+
+https://www.cloudflare.com/plans/developer-platform/#overview
 
 ### Download source code
 
